@@ -1,0 +1,20 @@
+.melon{
+  background-image: url(icons/melon.png);
+  height: 48px;
+  width: 48px;
+}
+.cucumber{
+  background-image: url(icons/cucumber.png);
+  height: 48px;
+  width: 48px;
+}
+.tomato{
+  background-image: url(icons/tomato.png);
+  height: 48px;
+  width: 48px;
+}
+.empty{
+  height: 48px;
+  width: 48px;
+  border: 2px solid green;
+}

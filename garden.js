@@ -8,6 +8,8 @@ const CUCUMBER_PRICE = 10;
 const MELON_PRICE    = 20;
 const TOMATO_PRICE   = 30;
 
+var money = 100;
+
 
 // calulele de tip Number
 var garden = [        // index
@@ -37,20 +39,33 @@ for (var i = 0; i <= 9; i++) {
   }if (garden[i] == EMPTY) {
     div.innerHTML +=('<div class="empty" onclick="gather(EMPTY,'+i+');"></div>')
   }
-  // document.write(garden[i]+ "<br>" );
   }
+  function showCoin(){
+  var divCoin = document.getElementById('coin');
+  divCoin.innerHTML = '';
+  divCoin.innerHTML += ('<div class="money" ></div> ');
+}
+showCoin();
+var money_div = document.getElementById('showMoney');
+    money_div.innerHTML = money;
 }
 
 function gather(vegetable, i ){
   if (vegetable == MELON) {
     garden[i] = EMPTY;
-      // alert(MELON_PRICE);
+    money == money+MELON_PRICE ;
       show();
   }if (vegetable == TOMATO) {
-      alert(TOMATO_PRICE);
+    garden[i] = EMPTY;
+      show();
   }if (vegetable == CUCUMBER) {
-      alert(CUCUMBER_PRICE);
+    garden[i] = EMPTY;
+      show();
+  }if (vegetable == EMPTY) {
+    garden[i] = prompt("Ce Plantam???")
+    show();
   }
-}
+  }
+
 
 show();
